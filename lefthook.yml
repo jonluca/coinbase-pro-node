@@ -1,0 +1,9 @@
+pre-commit:
+  parallel: true
+  commands:
+    fix-code:
+      glob: '*.{js,jsx,ts,tsx}'
+      run: yarn fix:code {staged_files}
+    fix-other:
+      glob: '*.{html,json,scss,yml}'
+      run: yarn fix:other {staged_files}
